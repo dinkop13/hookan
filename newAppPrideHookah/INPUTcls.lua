@@ -84,8 +84,11 @@ function INPUT:new( insertGrp, thisX, thisY, thisObj)
 				)
 				o.inputField.hasBackground = false
 				--o.inputField.size = 40
+				o.grp:insert( o.inputField )
 				o.inputField.inputType = "number"
 				--o.inputField:setTextColor( 1 )
+
+			o.stepY = WinH + 80
 		else
 			WinH = 230
 
@@ -138,10 +141,12 @@ function INPUT:new( insertGrp, thisX, thisY, thisObj)
 				o.inputField.hasBackground = false
 				--o.inputField.size = 40
 				o.inputField.inputType = "number"
+				o.grp:insert( o.inputField )
 				--o.inputField:setTextColor( 1 )
+
+			o.stepY = WinH + 80
 		end
 
-		o.stepY = WinH + 80
 	insertGrp:insert(o.grp)
 	setmetatable( o, self )
 	self.__index = self
