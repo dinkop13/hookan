@@ -1,5 +1,11 @@
---[[local win = require("WINcls")
+local win = require("WINcls")
 local input = require("INPUTcls")
 
 local mainWin = win:new()
-local mainInn = input:new(mainWin.grp, 540, 800, "Смесь курительная КОСМОС", "df")--]]
+
+local obj = {
+	name = "Курительная смесь космос",
+	befor = "300"
+}
+
+local mainInn = input:new(mainWin.grp, 540, 800, obj)
