@@ -141,6 +141,7 @@ function INPUT:new( insertGrp, thisX, thisY, thisObj)
 				--o.inputField:setTextColor( 1 )
 		end
 
+		o.stepY = WinH + 80
 	insertGrp:insert(o.grp)
 	setmetatable( o, self )
 	self.__index = self

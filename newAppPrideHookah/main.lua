@@ -1,17 +1,13 @@
 local win = require("WINcls")
 local input = require("INPUTcls")
-
+local item = require("ITEMcls")
+local inputTable  = require("INPUTTABLEcls")
 local mainWin = win:new()
 
-local obj1 = {
-	name = "Курительная смесь космос",
-	befor = 0
-}
+local obj = {}
 
-local obj2 = {
-	name = "Трубка для сосания члена",
-	befor = 12
-}
+	obj[1] = item:new("Курительный табак №1")
+	obj[2] = item:new("Курительный табак №2")
+		obj[2].befor = 13
 
-local mainInn1 = input:new(mainWin.grp, 540, 800, obj1)
-local mainInn2 = input:new(mainWin.grp, 540, 1200, obj2)
+local tableI = inputTable:new(obj)
